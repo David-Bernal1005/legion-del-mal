@@ -14,6 +14,20 @@ on:
           - Brainiac
           - Joker
           - Darkseid
+      mensaje:
+        description: "Mensaje a transmitir"
+        required: true
+        default: "La misión fue un éxito"
+        type: string
+      
+      prioridad:
+        description: "nivel de prioridad"
+        required: true
+        type: choice
+        options:
+          - Alta
+          - Media
+          - Critica
 
 jobs:
   transmitir-mensaje:
