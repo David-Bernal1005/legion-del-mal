@@ -34,4 +34,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Instalar el transmisor de la Legión
+        run: sudo apt-get install -y cowsay
+        
+      - name:  Imprimir inputs
+        run: |
+          echo "=============================="
+          echo "   Transmisiín interceptada   "
+          echo "=============================="
+          echo ""
+          echo "De: ${{ inputs.villano}}"
+          echo ""
+          echo "Fechas ${date -u +%d/%m/%Y - %H:%M:%S UTC}"
+          echo "-------- Mensaje --------"
+          cowsay -f eyes "${{ inputs.mensaje}}"
+          echo ""
+          echo "-- ${{ inputs.villano}}"
+          echo " ... "
