@@ -27,7 +27,7 @@ jobs:
                 echo "✅ Encontramos los archivos!"
                 echo ""
                 echo "Planes"
-                ls Planes/
+                ls planes/
                 echo "Vilanos"
                 ls Villanos/
                 echo "Inteligencia: "
