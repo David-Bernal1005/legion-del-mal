@@ -7,3 +7,5 @@ El objetivo es congelar Metropolis
 1.
 2.
 3.
+
+## Plan de escape
