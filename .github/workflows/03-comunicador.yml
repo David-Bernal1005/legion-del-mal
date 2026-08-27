@@ -29,6 +29,18 @@ on:
           - Media
           - Critica
 
+      cow_character:
+        description: "Personaje de la granja para mostrar el mensaje"
+        required: true
+        type: choice
+        options:
+          - ghostbusters
+          - eyes
+          - hellokitty
+          - dragon
+          - ren
+          - king
+
 jobs:
   transmitir-mensaje:
     runs-on: ubuntu-latest
@@ -47,7 +59,7 @@ jobs:
           echo ""
           echo "Fechas ${date -u +%d/%m/%Y - %H:%M:%S UTC}"
           echo "-------- Mensaje --------"
-          cowsay -f eyes "${{ inputs.mensaje}}"
+          cowsay -f ${{ inputs.cow_character}} "${{ inputs.mensaje}}"
           echo ""
           echo "-- ${{ inputs.villano}}"
           echo " ... "
